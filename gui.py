@@ -40,14 +40,29 @@ ttk.Label(root, text = "Select model type:",
   
 # Combobox creation
 n = tk.StringVar()
-monthchoosen = ttk.Combobox(root, width = 27, textvariable = n)
+typechoosen = ttk.Combobox(root, width = 27, textvariable = n)
   
 # Adding combobox drop down list
-monthchoosen['values'] = (' Classifyer', ' Bagging' )
+typechoosen['values'] = (' Classifyer', ' Bagging' )
   
-monthchoosen.grid(column = 1, row = 9)
-monthchoosen.current()
+typechoosen.grid(column = 1, row = 9)
+typechoosen.current()
+# ----------------------------------------------------------
+# label
+ttk.Label(root, text = "Select public dataset:",
+          font = ("Times New Roman", 10)).grid(column = 0,
+          row = 8, padx = 10, pady = 25)
 
+n = tk.StringVar()
+typechoosen = ttk.Combobox(root, width = 27, textvariable = n)
+  
+typechoosen['values'] = (' Boston house prices dataset',
+ ' Iris plants dataset',
+  'Diabetes dataset')
+  
+typechoosen.grid(column = 1, row = 8)
+typechoosen.current()
+#   --------------------------------------
 
 root.mainloop()
 print("test")
